@@ -27,7 +27,7 @@
 //}
 
 int main() {
-  const char* str = "This is a test programming.";
+  const char* str = "How do you do?";
   int len = strlen(str);
   struct timeval start, end;
   init_getputch();
@@ -49,7 +49,7 @@ int main() {
   }
   gettimeofday(&end, NULL);
   printf("\n用时%ld秒。\n", end.tv_sec - start.tv_sec);
-  getchar(); //暂停程序
+  getch(); //暂停程序
   term_getputch();
   return 0;
 }
