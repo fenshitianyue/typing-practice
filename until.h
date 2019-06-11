@@ -1,10 +1,6 @@
 #pragma once
 /* 用于getch/putch的通用头文件"until.h" */
 
-#ifndef __GETPUTCH
-
-#define __GETPUTCH
-
 #if defined(_MSC_VER) || (__TURBOC__) || (LSI_C)
 
 	/* MS-Windows／MS-DOS（Visual C++, Borland C++, LSI-C 86 etc ...）*/
@@ -27,7 +23,7 @@
 #undef printf
   static char __buf[4096];
 
-	/*--- _ _putchar：相当于putchar函数（用“换行符+回车符”代替换行符进行输出）---*/
+	/*--- __putchar：相当于putchar函数（用“换行符+回车符”代替换行符进行输出）---*/
 	static int __putchar(int ch)
 	{
 		if (ch == '\n')
@@ -44,7 +40,7 @@
 		return result;
 	}
 
-	/*--- _ _printf：相当于printf函数（用“换行符+回车符”代替换行符进行输出）---*/
+	/*--- __printf：相当于printf函数（用“换行符+回车符”代替换行符进行输出）---*/
 	static int __printf(const char *format, ...)
 	{
 		va_list	ap;
@@ -62,7 +58,7 @@
 		return count;
 	}
 
-	/*--- _ _puts：相当于puts函数（用“换行符+回车符”代替换行符进行输出）---*/
+	/*--- __puts：相当于puts函数（用“换行符+回车符”代替换行符进行输出）---*/
 	static int __puts(const char *s)
 	{
 		int i, j;
@@ -78,16 +74,16 @@
 	/*--- 库初始处理 ---*/
 	static void init_getputch(void)
 	{
-		initscr();
+		initscr(); //初始化 curses
 		cbreak();
 		noecho();
-		refresh();
+		refresh(); //清空当前屏幕
 	}
 
 	/*--- 库终止处理 ---*/
 	static void term_getputch(void)
 	{
-		endwin();
+		endwin(); //终止 curses
 	}
 
 #define putchar	__putchar
@@ -96,4 +92,3 @@
 
 #endif
 
-#endif
