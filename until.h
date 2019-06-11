@@ -1,30 +1,31 @@
-/* 用于getch/putch的通用头文件"getputch.h" */
+#pragma once
+/* 用于getch/putch的通用头文件"until.h" */
 
 #ifndef __GETPUTCH
 
-  #define __GETPUTCH
+#define __GETPUTCH
 
-  #if defined(_MSC_VER) || (__TURBOC__) || (LSI_C)
+#if defined(_MSC_VER) || (__TURBOC__) || (LSI_C)
 
 	/* MS-Windows／MS-DOS（Visual C++, Borland C++, LSI-C 86 etc ...）*/
 
-	#include <conio.h>
+#include <conio.h>
 
 	static void init_getputch(void) { /* 空 */ }
 
 	static void term_getputch(void) { /* 空 */ }
 
 
-  #else
+#else
 
 	/* 提供了Curses库的UNIX/Linux/OS X环境 */
 
-	#include <curses.h>
+#include <curses.h>
 
-	#undef putchar
-	#undef puts
-	#undef printf
-	static char __buf[4096];
+#undef putchar
+#undef puts
+#undef printf
+  static char __buf[4096];
 
 	/*--- _ _putchar：相当于putchar函数（用“换行符+回车符”代替换行符进行输出）---*/
 	static int __putchar(int ch)
@@ -89,10 +90,10 @@
 		endwin();
 	}
 
-	#define putchar	__putchar
-	#define	printf	__printf
-	#define puts	__puts
+#define putchar	__putchar
+#define	printf	__printf
+#define puts	__puts
 
-  #endif
+#endif
 
 #endif
