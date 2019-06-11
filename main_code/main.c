@@ -76,7 +76,7 @@ void c_practice() {
       SWAP(sort[i], sort[j]);
     }
   }
-  printf("打字练习程序。（按空格键开始）\r\n");
+  printf("打字练习程序。（按空格键开始）\r\n\n");
   while(getch() != ' ');
   gettimeofday(&start, NULL);
   for(unsigned long stage = 0; stage < C_NUM; ++stage){
@@ -112,7 +112,7 @@ void cpp_practice(){
       SWAP(sort[i], sort[j]);
     }
   }
-  printf("打字练习程序。（按空格键开始）\r\n");
+  printf("打字练习程序。（按空格键开始）\r\n\n");
   while(getch() != ' ');
   gettimeofday(&start, NULL);
   for(unsigned long stage = 0; stage < CPP_NUM; ++stage){
