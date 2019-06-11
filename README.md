@@ -1,4 +1,4 @@
-Typing Program
+# Typing Program
 
 ## 项目简介
 
