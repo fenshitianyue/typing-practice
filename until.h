@@ -75,8 +75,8 @@
 	static void init_getputch(void)
 	{
 		initscr(); //初始化 curses
-		cbreak();
-		noecho();
+		cbreak(); //开启 cbreak 模式，除了DELETE和CTRL等仍被视为特殊字符外的一切输入将立刻被一一读取
+		noecho(); //从键盘输入字符时默认不将字符显示在终端上
 		refresh(); //清空当前屏幕
 	}
 
