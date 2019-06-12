@@ -53,8 +53,5 @@
 
 ---
 
+![project screenshots](https://github.com/fenshitianyue/repositpry/master/typing-practice/demo/screenshots.jpg)
 
-
-![demo](https://github.com/fenshitianyue/WebDict/blob/master/demon/demo.gif)
-
-![project screenshots](https://github.com/fenshitianyue/WebDict/blob/master/demon/screenshots.jpg)
