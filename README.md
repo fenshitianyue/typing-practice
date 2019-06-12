@@ -53,5 +53,5 @@
 
 ---
 
-![project screenshots](https://github.com/fenshitianyue/repositpry/master/typing-practice/demo/screenshots.jpg)
+![project screenshots](https://github.com/fenshitianyue/typing-practice/blob/master/images/screenshots.jpg)
 
