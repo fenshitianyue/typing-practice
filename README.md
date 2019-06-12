@@ -53,5 +53,7 @@
 
 ---
 
+![demo](https://github.com/fenshitianyue/typing-practice/blob/master/images/demo.gif)
+
 ![project screenshots](https://github.com/fenshitianyue/typing-practice/blob/master/images/screenshots.jpg)
 
